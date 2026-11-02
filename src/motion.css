@@ -1,0 +1,23 @@
+.opening{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:#d0f574;color:#151b10;flex-direction:column;overflow:hidden}
+.opening-word{display:flex;gap:.15em;font-size:clamp(48px,9vw,150px);font-weight:800;letter-spacing:-.07em;overflow:hidden;line-height:1.5;padding:0 .15em}
+.opening-word span{display:block;transform-origin:center bottom}
+.opening-meta{position:absolute;left:60px;right:60px;bottom:55px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:2px}
+.opening-line{position:absolute;bottom:95px;left:60px;right:60px;height:1px;background:#18220d66;transform-origin:left}
+.opening-skip{position:absolute;top:35px;right:50px;border:1px solid #18220d66;background:transparent;border-radius:30px;padding:12px 20px;color:#151b10;font-size:10px;letter-spacing:1px;transition:background .3s,color .3s}
+.opening-skip:hover{background:#151b10;color:#d0f574}
+.hero h1{overflow:hidden;line-height:1.3;padding:.08em 0;margin-top:35px;margin-bottom:25px}
+.hero-char{display:inline-block;transform-origin:center bottom}
+.hero-char+.hero-char{margin-left:.02em}
+.chapter-title{font-size:clamp(58px,8.4vw,144px);line-height:1.06;letter-spacing:-.065em;font-weight:600;overflow:hidden;padding:.12em .03em .14em 0;margin:35px 0 38px;text-transform:uppercase;color:#e4e8dc}
+.chapter-word{display:inline-block;transform-origin:left bottom;white-space:nowrap}
+.chapter-word+.chapter-word{margin-left:.22em}
+.about .chapter-title{color:#a2ae94}
+.expertise .chapter-title{color:#c4d0b6}
+.contact .chapter-title{color:var(--lime)}
+.project-image{isolation:isolate}
+.project-parallax{position:absolute;inset:-7% 0;transform-origin:center}
+.project-image .project-preview{height:100%}
+.abilities{overflow:hidden}
+@media(max-width:900px){.chapter-title{font-size:clamp(44px,9vw,80px)}.project-parallax{inset:0}.opening-meta{left:25px;right:25px;bottom:30px;font-size:8px;letter-spacing:1px}.opening-line{left:25px;right:25px;bottom:65px}.opening-skip{right:25px;top:25px}}
+@media(max-width:500px){.chapter-title{font-size:clamp(38px,10vw,50px);margin:25px 0;line-height:1.1;letter-spacing:-.06em}.contact .chapter-title{font-size:10.3vw}.hero h1{margin-top:35px;margin-bottom:30px}}
+@media(prefers-reduced-motion:reduce){.opening{display:none!important}.hero-char,.chapter-word,.project-parallax{transform:none!important}}

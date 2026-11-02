@@ -1,0 +1,42 @@
+/* Preserve the supplied film's original color and exposure. */
+.hero-video{filter:none}
+.hero-shade{background:none;pointer-events:none}
+.hero-content,.hero-foot{color:#fff;text-shadow:0 2px 14px #000b}
+.hero-roles,.hero-foot,.round-link small{color:#e4e9df}
+
+.nav{transition:background-color .3s,border-color .3s,box-shadow .3s}
+.nav.nav-floating{
+ position:fixed;top:0;left:0;right:0;
+ background:rgba(17,23,19,.74);
+ -webkit-backdrop-filter:blur(24px) saturate(140%);
+ backdrop-filter:blur(24px) saturate(140%);
+ border-bottom:1px solid rgba(226,245,213,.16);
+ box-shadow:0 12px 40px #0003;
+ animation:nav-enter .32s ease-out;
+}
+@keyframes nav-enter{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
+
+.contact-link,.contact-cta,.text-link,.round-link,.hero-foot button,.contact-details button,.menu,.modal-close,.project-open,.project-caption,.nav nav a,footer>a:last-child{
+ transition:background-color .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.contact-cta{padding:15px 18px;border-radius:4px 4px 0 0}
+.text-link{padding:10px 14px;margin-left:-14px;border-radius:4px}
+.hero-foot button,.contact-details button{padding:10px 14px;border-radius:20px;border:1px solid transparent}
+.menu{border-radius:6px}
+.nav nav a{border-radius:4px;padding-left:8px;padding-right:8px}
+@media(hover:hover){
+ .contact-link:hover,.contact-cta:hover,.text-link:hover,.hero-foot button:not(:disabled):hover,.contact-details button:hover,.menu:hover,.modal-close:hover{
+  background-color:var(--lime);color:#11190c;border-color:var(--lime);text-shadow:none;
+ }
+ .nav nav a:hover{color:var(--lime);background-color:#d0f57414}
+ .round-link:hover,.round-link:hover small,footer>a:last-child:hover{color:var(--lime)}
+ .project:hover .project-open{background-color:var(--lime);border-color:var(--lime);color:#11190c}
+ .project:hover .project-caption{color:var(--lime)}
+}
+@media(prefers-reduced-motion:reduce){.nav.nav-floating{animation:none}}
+.project-image .project-preview{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform .65s ease}
+.project-image img.project-preview,.project:hover img.project-preview{filter:none}
+.project:hover .project-preview{transform:scale(1.025)}
+.film-player{display:block;width:100%;max-height:62vh;aspect-ratio:16/9;object-fit:contain;background:#000}
+.film-error{padding:15px 30px;font-size:12px;color:#b8c3ac;line-height:1.8}
+.film-error a{color:var(--lime);text-decoration:underline}
